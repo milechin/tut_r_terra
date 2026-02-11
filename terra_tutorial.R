@@ -212,6 +212,17 @@ ggplot() +
   ggtitle("Rast4")
 
 
+# To save the raster we can use writeRaster()
+writeRaster(rast4, "rast4.tif")
+
+# TIF is not the only raster data format.
+# We can use gdal() to list supported drivers.
+
+gdal(drivers=TRUE)
+
+?writeRaster
+
+
 ###########################
 # Accessing Cell Values
 ###########################
@@ -446,11 +457,6 @@ multi_rast1 <- multi_rast$landsat_1
 # We can also combine layers into one object:
 multi_rast341 <- c(multi_rast3, multi_rast4, multi_rast1)
 multi_rast341
-
-
-
-
-
 
 
 
