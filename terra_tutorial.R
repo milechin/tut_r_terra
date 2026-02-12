@@ -25,7 +25,7 @@ install.packages("terra")
 install.packages("spDataLarge", repos = "https://nowosad.r-universe.dev")
 install.packages("tidyterra")
 install.packages("spData")
-install.packages("tidyvers")
+install.packages("tidyverse")
 
 #----------------------------------------#
 #  Expectations for this tutorial     ####
