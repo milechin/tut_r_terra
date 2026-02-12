@@ -187,6 +187,10 @@ ggplot() +
 
 nz_elev_path <- system.file( "raster/nz_elev.tif", package="spDataLarge" )
 nz_elev <- rast(nz_elev_path)
+
+ggplot() +
+  geom_spatraster( data=nz_elev)
+
 AOI <- ext(nz_elev)
 
 rast4 <- rast(
@@ -201,8 +205,8 @@ rast4
 
 # Since the Area of Interest is New Zealand, lets
 # plot only the AOI.
-x_extent <- c(xmin(rast5), xmax(rast5))
-y_extent <- c(ymin(rast5), ymax(rast5))
+x_extent <- c(xmin(rast4), xmax(rast4))
+y_extent <- c(ymin(rast4), ymax(rast4))
 
 
 ggplot() +
